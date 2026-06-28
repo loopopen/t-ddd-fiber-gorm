@@ -1,0 +1,98 @@
+basePath: /
+definitions:
+  dto.Resp:
+    properties:
+      data: {}
+      error:
+        type: string
+      message:
+        type: string
+      metadata:
+        additionalProperties:
+          type: string
+        type: object
+      reason:
+        type: string
+    type: object
+  result.User:
+    properties:
+      age:
+        type: integer
+      birthday:
+        example: "1987-11-29"
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: user@example.com
+    name: Owner
+  title: <app-name>-<org-name> API
+  version: "1.0"
+paths:
+  /api/v1/users:
+    get:
+      description: Query users by key.
+      parameters:
+      - description: Search key for User name
+        in: query
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.Resp'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/result.User'
+                  type: array
+              type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.Resp'
+            - properties:
+                data:
+                  type: object
+              type: object
+      summary: Query users.
+      tags:
+      - User
+  /api/v1/users/unsafe-timeout:
+    get:
+      description: Query users by key.
+      parameters:
+      - description: Search key for User name
+        in: query
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.Resp'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/result.User'
+                  type: array
+              type: object
+      summary: Query users. (Unsafe Timeout Demo)
+      tags:
+      - User
+swagger: "2.0"
