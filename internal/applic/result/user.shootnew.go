@@ -5,8 +5,8 @@ package result
 import (
 	"encoding/json"
 
+	"github.com/loopopen/pkg/timex"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/infra"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/timex"
 )
 
 // NewUser constructs a new instance of type User

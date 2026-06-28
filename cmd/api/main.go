@@ -13,10 +13,10 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/loopopen/pkg/confx"
+	"github.com/loopopen/pkg/x"
 	"github.com/loopopen/t-ddd-fiber-gorm/cmd/api/config"
 	_ "github.com/loopopen/t-ddd-fiber-gorm/docs"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/confx"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/x"
 	_ "go.uber.org/automaxprocs"
 )
 
@@ -61,6 +61,7 @@ func main() {
 		err := app.Listen(fmt.Sprintf("%s:%d", c.Bind, c.Port))
 		if err != nil {
 			logger.Error("server stop listening with error", slog.Any("err", err))
+			os.Exit(1)
 		}
 	}()
 

@@ -4,11 +4,11 @@ import (
 	"context"
 	"log/slog"
 
+	"github.com/loopopen/pkg/slogx"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/applic/query"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/applic/result"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/event"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/repo"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/x"
 
 	"github.com/lopolopen/gap"
 	"gorm.io/gorm"
@@ -23,7 +23,7 @@ type UserSvc struct {
 
 func NewUserSvc(logger *slog.Logger, db *gorm.DB, pub gap.EventPublisher, quantRepo repo.UserRepo) *UserSvc {
 	svc := &UserSvc{
-		logger:   x.SLogWithin(logger, &UserSvc{}),
+		logger:   slogx.Within(logger, &UserSvc{}),
 		db:       db,
 		pub:      pub,
 		userRepo: quantRepo,

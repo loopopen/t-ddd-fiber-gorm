@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/loopopen/pkg/slogx"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/entity"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/enum"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/repo"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/infra/gorm/po"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/x"
 	"gorm.io/gorm"
 )
 
@@ -31,7 +31,7 @@ func (r *UserRepo) Bind(txer repo.Txer) (repo.UserRepo, error) {
 func NewUserRepo(logger *slog.Logger, db *gorm.DB) *UserRepo {
 	r := &UserRepo{
 		Base:   NewBase[uint, entity.User, *entity.User, *po.User](db),
-		logger: x.SLogWithin(logger, &UserRepo{}),
+		logger: slogx.Within(logger, &UserRepo{}),
 	}
 	var _ repo.UserRepo = r
 	return r

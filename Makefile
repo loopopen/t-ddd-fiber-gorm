@@ -78,6 +78,6 @@ name:
 		echo "Usage: make name org=<org-name> app=<app-name>"; \
 		exit 1; \
 	fi
-	chmod +x name.sh
+	@chmod +x name.sh
 	@./name.sh $(org) $(app)
 # ===============================================================

@@ -10,7 +10,7 @@ make name org=<org-name> app=<app-name>
 
 * Use make to build swagger documents.
 ```sh
-make swag
+make doc
 ```
 
 * Use make to run your project.

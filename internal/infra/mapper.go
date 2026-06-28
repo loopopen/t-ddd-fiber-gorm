@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/timex"
+	"github.com/loopopen/pkg/timex"
 )
 
 type Mapper struct{}

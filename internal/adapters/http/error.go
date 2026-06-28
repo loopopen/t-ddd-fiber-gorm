@@ -5,15 +5,15 @@ import (
 	"log/slog"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/loopopen/pkg/slogx"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/adapters/http/dto"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/adapters/http/timeout"
-	"github.com/loopopen/t-ddd-fiber-gorm/internal/pkg/x"
 	"github.com/loopopen/t-ddd-fiber-gorm/pkg/schema/errx"
 	"github.com/lopolopen/pkg/errorx"
 )
 
 func HandlerError(logger *slog.Logger) fiber.ErrorHandler {
-	logger = x.SLogWithin(logger, HandlerError)
+	logger = slogx.Within(logger, HandlerError)
 
 	return func(c *fiber.Ctx, theErr error) error {
 		if errors.Is(theErr, timeout.ErrUnsafeFiberCtx) {
