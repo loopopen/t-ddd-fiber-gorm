@@ -54,6 +54,6 @@ go install golang.org/x/tools/cmd/gonew@latest
 ### 2. Use this template to create your project.
 ```sh
 mkdir <app-name> && \
-gonew github.com/loopopenen/t-ddd-fiber-gorm github.com/<org-name>/<app-name> ./<app-name>
+gonew github.com/loopopen/t-ddd-fiber-gorm github.com/<org-name>/<app-name> ./<app-name>
 ```
 

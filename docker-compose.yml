@@ -4,6 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile.debug
     container_name: ${ORG_NAME}-${APP_NAME}-debug
+    depends_on:
+      - mariadb
+      - kafka
     environment:
       - APP_ENV=${APP_ENV}
       - APP_ORM_MYSQL_DSN=${APP_ORM_MYSQL_DSN}
