@@ -7,11 +7,12 @@
 package schema
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -86,7 +87,7 @@ const file_pkg_schema_error_reason_proto_rawDesc = "" +
 	"\x0fFRAMEWORK_ERROR\x10\x01\x12\x1c\n" +
 	"\x17INVALID_IDEMPOTENCY_KEY\x10\x91\x03\x12\x1b\n" +
 	"\x16INVALID_REQUEST_FIELDS\x10\x92\x03\x12\x11\n" +
-	"\fNIL_ARGUMENT\x10\xf5\x03B9Z7github.com/lopolopen/t-ddd-fiber-gorm/pkg/schema;schemab\x06proto3"
+	"\fNIL_ARGUMENT\x10\xf5\x03B9Z7github.com/loopopen/t-ddd-fiber-gorm/pkg/schema;schemab\x06proto3"
 
 var (
 	file_pkg_schema_error_reason_proto_rawDescOnce sync.Once

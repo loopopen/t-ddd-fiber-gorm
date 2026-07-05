@@ -18,7 +18,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/timeout"
 	"github.com/gofiber/swagger"
 	"github.com/google/wire"
-	"github.com/lopolopen/gap"
+	"github.com/loopopen/gap"
 )
 
 var ProviderSet = wire.NewSet(NewApp)

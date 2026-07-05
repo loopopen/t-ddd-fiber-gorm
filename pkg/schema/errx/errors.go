@@ -2,8 +2,8 @@ package errx
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/loopopen/pkg/errorx"
 	"github.com/loopopen/t-ddd-fiber-gorm/pkg/schema"
-	"github.com/lopolopen/pkg/errorx"
 )
 
 func FrameworkErr(err *fiber.Error) *errorx.Error {

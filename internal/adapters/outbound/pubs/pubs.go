@@ -4,12 +4,12 @@ import (
 	"context"
 	"log/slog"
 
+	"github.com/loopopen/gap"
+	"github.com/loopopen/gap/broker/xkafka"
+	"github.com/loopopen/gap/dashboard"
+	"github.com/loopopen/gap/storage/xgorm"
 	tfiberkafkagorm "github.com/loopopen/t-ddd-fiber-gorm"
 	"github.com/loopopen/t-ddd-fiber-gorm/cmd/api/config"
-	"github.com/lopolopen/gap"
-	"github.com/lopolopen/gap/broker/xkafka"
-	"github.com/lopolopen/gap/dashboard"
-	"github.com/lopolopen/gap/storage/xgorm"
 
 	"gorm.io/gorm"
 )

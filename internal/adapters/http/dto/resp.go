@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/lopolopen/pkg/errorx"
+import "github.com/loopopen/pkg/errorx"
 
 type Resp struct {
 	Data     any               `json:"data,omitempty"`

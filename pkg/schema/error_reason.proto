@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package schema;
 
-option go_package = "github.com/lopolopen/t-ddd-fiber-gorm/pkg/schema;schema";
+option go_package = "github.com/loopopen/t-ddd-fiber-gorm/pkg/schema;schema";
 
 enum ErrorReason {
     UNSPECIFIED = 0;

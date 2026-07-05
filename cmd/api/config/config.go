@@ -3,8 +3,8 @@ package config
 import (
 	"log/slog"
 
+	"github.com/loopopen/gap/broker/xkafka"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/infra/conf"
-	"github.com/lopolopen/gap/broker/xkafka"
 )
 
 type Env struct {

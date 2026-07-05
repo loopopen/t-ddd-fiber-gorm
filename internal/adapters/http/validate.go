@@ -21,7 +21,7 @@ var validate = validator.New()
 type Failure struct {
 	Field string `json:"field"`
 	Tag   string `json:"tag"`
-	Value string `json:"value"`
+	Value any    `json:"value"`
 }
 
 func validateStruct(s interface{}) []*Failure {
@@ -32,7 +32,7 @@ func validateStruct(s interface{}) []*Failure {
 			var f Failure
 			f.Field = err.StructNamespace()
 			f.Tag = err.Tag()
-			f.Value = err.Param()
+			f.Value = err.Value()
 			failures = append(failures, &f)
 		}
 	}
@@ -62,7 +62,7 @@ func Validate[T any](source From) fiber.Handler {
 		if failures := validateStruct(payload); len(failures) > 0 {
 			meta := make(map[string]string)
 			for _, f := range failures {
-				meta[f.Field] = fmt.Sprintf("failed on the '%s' tag, value: '%s'", f.Tag, f.Value)
+				meta[f.Field] = fmt.Sprintf("failed on the '%s' tag, value: '%v'", f.Tag, f.Value)
 			}
 			return errx.ErrInvalidRequestFields.WithMetadata(meta)
 		}

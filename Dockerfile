@@ -2,7 +2,7 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 ARG BUILD_MODE=release
 
-FROM golang:1.25.0-alpine AS builder
+FROM golang:1.25-alpine AS builder
 WORKDIR /app
 # Use a reliable GOPROXY; change if needed
 ENV GOPROXY=https://goproxy.cn,direct

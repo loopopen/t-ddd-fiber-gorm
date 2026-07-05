@@ -10,7 +10,7 @@ import (
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/event"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/repo"
 
-	"github.com/lopolopen/gap"
+	"github.com/loopopen/gap"
 	"gorm.io/gorm"
 )
 

@@ -6,9 +6,9 @@ import (
 	"context"
 	"encoding/json"
 
+	"github.com/loopopen/gap"
+	"github.com/loopopen/gap/gapc"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/domain/event"
-	"github.com/lopolopen/gap"
-	"github.com/lopolopen/gap/gapc"
 )
 
 func init() {
@@ -34,7 +34,7 @@ func init() {
 				return nil
 			},
 			new(event.UserCreated).Topic(),
-			"github.com.lopolopen.t-ddd-fiber-gorm",
+			"github.com.loopopen.t-ddd-fiber-gorm",
 		),
 	)
 }

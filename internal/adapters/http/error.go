@@ -5,11 +5,11 @@ import (
 	"log/slog"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/loopopen/pkg/errorx"
 	"github.com/loopopen/pkg/slogx"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/adapters/http/dto"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/adapters/http/timeout"
 	"github.com/loopopen/t-ddd-fiber-gorm/pkg/schema/errx"
-	"github.com/lopolopen/pkg/errorx"
 )
 
 func HandlerError(logger *slog.Logger) fiber.ErrorHandler {

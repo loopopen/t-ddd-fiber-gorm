@@ -4,23 +4,22 @@ go 1.25.0
 
 tool (
 	github.com/google/wire/cmd/wire
-	github.com/lopolopen/gap/cmd/gapc
-	github.com/lopolopen/shoot/cmd/shoot
+	github.com/loopopen/gap/cmd/gapc
+	github.com/loopopen/shoot/cmd/shoot
 	github.com/swaggo/swag/cmd/swag
 	google.golang.org/protobuf/cmd/protoc-gen-go
 )
 
 require (
 	github.com/go-playground/validator/v10 v10.30.2
-	github.com/gofiber/fiber/v2 v2.52.12
+	github.com/gofiber/fiber/v2 v2.52.15
 	github.com/gofiber/swagger v1.1.1
 	github.com/google/wire v0.7.0
+	github.com/loopopen/gap v0.2.0-beta.2
+	github.com/loopopen/gap/broker/xkafka v0.2.0-beta.2
+	github.com/loopopen/gap/storage/xgorm v0.2.0-beta.2
 	github.com/loopopen/pkg v0.0.1
-	github.com/lopolopen/gap v0.1.2-beta.1
-	github.com/lopolopen/gap/broker/xkafka v0.1.0-beta.2
-	github.com/lopolopen/gap/storage/xgorm v0.1.1-beta.1
-	github.com/lopolopen/pkg v0.0.1
-	github.com/lopolopen/shoot v0.7.3
+	github.com/loopopen/shoot v0.9.0-beta.1
 	github.com/swaggo/swag v1.16.6
 	go.uber.org/automaxprocs v1.6.0
 	google.golang.org/protobuf v1.36.11
@@ -79,13 +78,13 @@ require (
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/crypto v0.49.0 // indirect
-	golang.org/x/mod v0.33.0 // indirect
-	golang.org/x/net v0.52.0 // indirect
-	golang.org/x/sync v0.20.0 // indirect
-	golang.org/x/sys v0.43.0 // indirect
-	golang.org/x/text v0.35.0 // indirect
-	golang.org/x/tools v0.42.0 // indirect
+	golang.org/x/crypto v0.53.0 // indirect
+	golang.org/x/mod v0.37.0 // indirect
+	golang.org/x/net v0.56.0 // indirect
+	golang.org/x/sync v0.21.0 // indirect
+	golang.org/x/sys v0.46.0 // indirect
+	golang.org/x/text v0.39.0 // indirect
+	golang.org/x/tools v0.47.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260226221140-a57be14db171 // indirect
 	google.golang.org/grpc v1.81.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
