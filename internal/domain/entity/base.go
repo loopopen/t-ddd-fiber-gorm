@@ -4,12 +4,12 @@ import (
 	"errors"
 )
 
-//go:generate go tool shoot new -getset -file=$GOFILE
+//go:generate go tool shoot new -getset -sign=@ -file=$GOFILE
 
 var _ Entity[uint] = &Base[uint]{}
 
 type Base[Tid ID] struct {
-	//shoot: get
+	//@get
 	id Tid
 }
 

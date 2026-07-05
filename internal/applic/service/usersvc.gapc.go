@@ -34,7 +34,7 @@ func init() {
 				return nil
 			},
 			new(event.UserCreated).Topic(),
-			"github.com.lopolopen.t-ddd-fiber-gorm",
+			"github.com.loopopen.t-ddd-fiber-gorm",
 		),
 	)
 }

@@ -20,7 +20,7 @@ require (
 	github.com/lopolopen/gap/broker/xkafka v0.1.0-beta.2
 	github.com/lopolopen/gap/storage/xgorm v0.1.1-beta.1
 	github.com/lopolopen/pkg v0.0.1
-	github.com/lopolopen/shoot v0.7.3
+	github.com/lopolopen/shoot v0.7.7
 	github.com/swaggo/swag v1.16.6
 	go.uber.org/automaxprocs v1.6.0
 	google.golang.org/protobuf v1.36.11

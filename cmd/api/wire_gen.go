@@ -8,8 +8,6 @@ package main
 
 import (
 	"context"
-	"log/slog"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/loopopen/t-ddd-fiber-gorm/cmd/api/config"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/adapters/http"
@@ -19,9 +17,11 @@ import (
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/infra/gorm"
 	"github.com/loopopen/t-ddd-fiber-gorm/internal/infra/gorm/repoimpl"
 	"github.com/lopolopen/gap/broker/xkafka"
+	"log/slog"
+)
 
+import (
 	_ "github.com/loopopen/t-ddd-fiber-gorm/docs"
-
 	_ "go.uber.org/automaxprocs"
 )
 

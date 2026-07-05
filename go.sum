@@ -96,8 +96,8 @@ github.com/lopolopen/gap/storage/xgorm v0.1.1-beta.1 h1:MI0Pcq1zxw0Wc4CaG2FlIHQr
 github.com/lopolopen/gap/storage/xgorm v0.1.1-beta.1/go.mod h1:+2babLS56B/TEvfWViLe5pj4bK681xBNK+6N59AYMmA=
 github.com/lopolopen/pkg v0.0.1 h1:8iWQxE86TK2CE6QbE5ChNAL/V6WhzII3eq6nzdduLr0=
 github.com/lopolopen/pkg v0.0.1/go.mod h1:+JByXUi+gZcgzNIumP625Hv/keuU55bwNVll+FNDOMQ=
-github.com/lopolopen/shoot v0.7.3 h1:m8pVs8iSKVvdCFGH4GoqDbwzG6fOondyOGzxHfdTGDI=
-github.com/lopolopen/shoot v0.7.3/go.mod h1:SeFIk1jt9F1Q4Q8IBst2bAh/LA2ijIFKDU4sBOcbA/g=
+github.com/lopolopen/shoot v0.7.7 h1:yrmyWJ4gp3gaiR80ODoQYtI4Tx1djNVi1QFaWazL1mk=
+github.com/lopolopen/shoot v0.7.7/go.mod h1:SeFIk1jt9F1Q4Q8IBst2bAh/LA2ijIFKDU4sBOcbA/g=
 github.com/mailru/easyjson v0.0.0-20190614124828-94de47d64c63/go.mod h1:C1wdFJiN94OJF2b5HbByQZoLdCWB1Yqtg26g4irojpc=
 github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e/go.mod h1:C1wdFJiN94OJF2b5HbByQZoLdCWB1Yqtg26g4irojpc=
 github.com/mailru/easyjson v0.7.6 h1:8yTIVnZgCoiM1TgqoeTl+LfU5Jg6/xL3QhGQnimLYnA=
