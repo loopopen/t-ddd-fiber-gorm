@@ -18,8 +18,10 @@ gen:
 
 GOPATH=$(shell go env GOPATH)
 
+PROTOC_GEN_GO := $(shell go tool -n protoc-gen-go)
+
 proto:
-	@protoc --plugin=protoc-gen-go=$(GOPATH)/bin/protoc-gen-go \
+	protoc --plugin=protoc-gen-go=$(PROTOC_GEN_GO) \
 	    --proto_path=. \
 		--go_out=. \
 		--go_opt=paths=source_relative \

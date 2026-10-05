@@ -11,7 +11,8 @@
             "mode": "auto",
             "program": "${workspaceFolder}/cmd/api",
             "env": {
-                "APP_ENV": "local"
+                "APP_ENV": "local",
+                "GOROOT": "",
             }
         },
         {
