@@ -2,7 +2,20 @@
 
 ## This project is generated from template [t-ddd-fiber-gorm](https://github.com/loopopenen/t-ddd-fiber-gorm).
 
-## 1. Use make.
+## 1. Manage Go versions with goenv (recommended).
+
+This project includes a `.go-version` file. We recommend using [goenv](https://github.com/go-nv/goenv) to manage multiple Go versions and automatically select the version required by this project.
+
+After installing and configuring `goenv`, install the project-specific Go version:
+
+```sh
+goenv install "$(cat .go-version)"
+go version
+```
+
+When you enter the project directory, `goenv` reads `.go-version` and switches to the matching Go version automatically.
+
+## 2. Use make.
 * Use make to rename application name.
 ```sh
 make name org=<org-name> app=<app-name>
@@ -30,11 +43,11 @@ make wire
 make gen
 ```
 
-## 2. Run and access http://127.0.0.1:8080/swagger/index.html
+## 3. Run and access http://127.0.0.1:8080/swagger/index.html
 
-## 3. Delete file PLEASE_DELETE_ME.go and fix your code.
+## 4. Delete file PLEASE_DELETE_ME.go and fix your code.
 
-## 4. Create a new git repository of the command line:
+## 5. Create a new git repository of the command line:
 ```sh
 git init
 git add -A
@@ -56,4 +69,3 @@ go install golang.org/x/tools/cmd/gonew@latest
 mkdir <app-name> && \
 gonew github.com/loopopen/t-ddd-fiber-gorm github.com/<org-name>/<app-name> ./<app-name>
 ```
-
