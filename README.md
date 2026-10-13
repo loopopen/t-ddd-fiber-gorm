@@ -68,4 +68,5 @@ go install golang.org/x/tools/cmd/gonew@latest
 ```sh
 mkdir <app-name> && \
 gonew github.com/loopopen/t-ddd-fiber-gorm github.com/<org-name>/<app-name> ./<app-name>
+make tidy
 ```
