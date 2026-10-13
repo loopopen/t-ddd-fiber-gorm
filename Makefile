@@ -1,7 +1,9 @@
 .PHONY: test doc wire debug clean run gen build name tidy proto push
 
-APP_NAME		:= <app-name>
-ORG_NAME		:= <org-name>
+MODULE   		:= $(shell go list -m)
+APP_NAME 		:= $(notdir $(MODULE))
+ORG_NAME 		:= $(notdir $(patsubst %/$(APP_NAME),%,$(MODULE)))
+
 IMAGE_BASE 		:= ${ORG_NAME}/${APP_NAME}
 REGISTRY   		:= docker.io
 GIT_SHORT_SHA 	:= $(shell git describe --always --dirty 2>/dev/null || echo "unknown")
@@ -15,8 +17,6 @@ doc:
 
 gen:
 	go generate ./...
-
-GOPATH=$(shell go env GOPATH)
 
 PROTOC_GEN_GO := $(shell go tool -n protoc-gen-go)
 
@@ -38,13 +38,13 @@ migrate-up:
 migrate-down:	
 	${MIGRATE_CLI} -path ./db/migrations -database ${DATABASE} down
 
-debug:
-	docker compose up --no-build
-
-debug-build:
-	docker compose up --build
-
-clean:
+compose-up:
+	ORG_NAME=$(ORG_NAME) \
+	APP_NAME=$(APP_NAME) \
+	docker compose up -d $(if $(rebuild),--build,--no-build)
+compose-clean:
+	ORG_NAME=$(ORG_NAME) \
+	APP_NAME=$(APP_NAME) \
 	docker compose down --volumes --remove-orphans
 	docker image prune -f
 
@@ -75,13 +75,3 @@ tidy:
 	go mod edit -modfile=tools.mod -module=$$(go list -m)
 	go list -m -f '{{if and (not .Indirect) (not .Main) .Version}}{{.Path}}@{{.Version}}{{end}}' all | xargs -r go get -modfile=tools.mod
 	go mod tidy -modfile=tools.mod
-
-# ===== Can be deleted when the initialization is finished. =====
-name:
-	@if [ -z "$(org)" ] || [ -z "$(app)" ]; then \
-		echo "Usage: make name org=<org-name> app=<app-name>"; \
-		exit 1; \
-	fi
-	@chmod +x name.sh
-	@./name.sh $(org) $(app)
-# ===============================================================

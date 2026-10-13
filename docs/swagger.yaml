@@ -31,7 +31,7 @@ info:
   contact:
     email: user@example.com
     name: Owner
-  title: <app-name>-<org-name> API
+  title: API Document
   version: "1.0"
 paths:
   /api/v1/users:

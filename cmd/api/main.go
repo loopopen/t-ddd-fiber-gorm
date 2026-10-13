@@ -23,7 +23,7 @@ import (
 var commitSHA string
 var f = flag.String("f", "etc/config.yaml", "config file")
 
-// @title <app-name>-<org-name> API
+// @title API Document
 // @version 1.0
 // @description
 // @contact.name Owner
