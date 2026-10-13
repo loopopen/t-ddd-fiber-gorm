@@ -12,12 +12,12 @@ require (
 	github.com/loopopen/gap v0.2.1-beta.1
 	github.com/loopopen/gap/broker/xkafka v0.2.1-beta.1
 	github.com/loopopen/gap/storage/xgorm v0.2.1-beta.1
-	github.com/loopopen/pkg v0.1.2
+	github.com/loopopen/pkg v0.0.1
 	github.com/loopopen/shoot v0.9.0-beta.5
 	github.com/swaggo/swag v1.16.6
-	google.golang.org/protobuf v1.36.11
+	google.golang.org/protobuf v1.36.12
 	gorm.io/driver/mysql v1.6.0
-	gorm.io/gorm v1.31.1
+	gorm.io/gorm v1.31.2
 )
 
 require (
