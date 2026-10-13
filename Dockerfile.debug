@@ -1,7 +1,7 @@
 ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 
-FROM golang:1.25-alpine AS builder
+FROM golang:1.26-alpine AS builder
 WORKDIR /app
 
 ENV GOPROXY=https://goproxy.cn,direct
@@ -15,7 +15,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
     go build -gcflags="all=-N -l" -tags=debug -o main ./cmd/api
 
-FROM alpine:3.23.4
+FROM alpine:3.23.6
 WORKDIR /app
 
 COPY --from=builder /app/dlv .

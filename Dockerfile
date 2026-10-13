@@ -2,7 +2,7 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 ARG BUILD_MODE=release
 
-FROM golang:1.25-alpine AS builder
+FROM golang:1.26-alpine AS builder
 WORKDIR /app
 # Use a reliable GOPROXY; change if needed
 ENV GOPROXY=https://goproxy.cn,direct
@@ -27,7 +27,7 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
 
 FROM build-${BUILD_MODE} AS build-final
 
-FROM alpine:3.23.4
+FROM alpine:3.23.6
 WORKDIR /app
 # Create a non-root user and ensure permissions for /app
 RUN addgroup -S app && adduser -S app -G app && mkdir -p /app/etc && chown -R app:app /app

@@ -22,7 +22,6 @@ import (
 
 import (
 	_ "github.com/loopopen/t-ddd-fiber-gorm/docs"
-	_ "go.uber.org/automaxprocs"
 )
 
 // Injectors from wire.go:
