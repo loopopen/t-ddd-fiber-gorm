@@ -17,7 +17,6 @@ import (
 	"github.com/loopopen/pkg/x"
 	"github.com/loopopen/t-ddd-fiber-gorm/cmd/api/config"
 	_ "github.com/loopopen/t-ddd-fiber-gorm/docs"
-	_ "go.uber.org/automaxprocs"
 )
 
 var commitSHA string

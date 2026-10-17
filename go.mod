@@ -15,13 +15,12 @@ require (
 	github.com/gofiber/fiber/v2 v2.52.15
 	github.com/gofiber/swagger v1.1.1
 	github.com/google/wire v0.7.0
-	github.com/loopopen/gap v0.2.0-beta.2
-	github.com/loopopen/gap/broker/xkafka v0.2.0-beta.2
-	github.com/loopopen/gap/storage/xgorm v0.2.0-beta.2
+	github.com/loopopen/gap v0.3.0-beta.3
+	github.com/loopopen/gap/broker/xkafka v0.3.0-beta.3
+	github.com/loopopen/gap/storage/xgorm v0.3.0-beta.3
 	github.com/loopopen/pkg v0.0.1
-	github.com/loopopen/shoot v0.9.0-beta.1
+	github.com/loopopen/shoot v0.9.0
 	github.com/swaggo/swag v1.16.6
-	go.uber.org/automaxprocs v1.6.0
 	google.golang.org/protobuf v1.36.11
 	gorm.io/driver/mysql v1.6.0
 	gorm.io/gorm v1.31.1
