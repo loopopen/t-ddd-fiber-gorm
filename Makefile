@@ -1,4 +1,4 @@
-.PHONY: test doc wire debug clean run gen build name tidy proto push
+.PHONY: test doc wire run gen build tidy proto push
 
 MODULE   		:= $(shell go list -m)
 APP_NAME 		:= $(notdir $(MODULE))
@@ -38,10 +38,12 @@ migrate-up:
 migrate-down:	
 	${MIGRATE_CLI} -path ./db/migrations -database ${DATABASE} down
 
+build := 1
+
 compose-up:
 	ORG_NAME=$(ORG_NAME) \
 	APP_NAME=$(APP_NAME) \
-	docker compose up -d $(if $(rebuild),--build,--no-build)
+	docker compose up  $(if $(build),--build,--no-build)
 compose-clean:
 	ORG_NAME=$(ORG_NAME) \
 	APP_NAME=$(APP_NAME) \
