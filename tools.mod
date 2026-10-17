@@ -9,11 +9,11 @@ require (
 	github.com/gofiber/fiber/v2 v2.52.15
 	github.com/gofiber/swagger v1.1.1
 	github.com/google/wire v0.7.0
-	github.com/loopopen/gap v0.2.1-beta.1
-	github.com/loopopen/gap/broker/xkafka v0.2.1-beta.1
-	github.com/loopopen/gap/storage/xgorm v0.2.1-beta.1
+	github.com/loopopen/gap v0.3.0-beta.3
+	github.com/loopopen/gap/broker/xkafka v0.3.0-beta.3
+	github.com/loopopen/gap/storage/xgorm v0.3.0-beta.3
 	github.com/loopopen/pkg v0.0.1
-	github.com/loopopen/shoot v0.9.0-beta.5
+	github.com/loopopen/shoot v0.9.0
 	github.com/swaggo/swag v1.16.6
 	google.golang.org/protobuf v1.36.12
 	gorm.io/driver/mysql v1.6.0
@@ -82,7 +82,7 @@ require (
 	github.com/felixge/httpsnoop v1.1.0 // indirect
 	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
-	github.com/gabriel-vasile/mimetype v1.4.15 // indirect
+	github.com/gabriel-vasile/mimetype v1.4.16 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect

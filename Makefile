@@ -6,7 +6,7 @@ ORG_NAME 		:= $(notdir $(patsubst %/$(APP_NAME),%,$(MODULE)))
 
 IMAGE_BASE 		:= ${ORG_NAME}/${APP_NAME}
 REGISTRY   		:= docker.io
-GIT_SHORT_SHA 	:= $(shell git describe --always --dirty 2>/dev/null || echo "unknown")
+GIT_SHORT_SHA 	:= $(shell git describe --always --dirty 2>/dev/null || echo "dirty")
 
 wire:
 	@cd ./cmd/api && go tool wire
@@ -40,15 +40,21 @@ migrate-down:
 
 build := 1
 
-compose-up:
+compose-up: assert-name
 	ORG_NAME=$(ORG_NAME) \
 	APP_NAME=$(APP_NAME) \
-	docker compose up  $(if $(build),--build,--no-build)
-compose-clean:
+	docker compose up $(if $(build),--build,--no-build)
+compose-clean: assert-name
 	ORG_NAME=$(ORG_NAME) \
 	APP_NAME=$(APP_NAME) \
 	docker compose down --volumes --remove-orphans
 	docker image prune -f
+
+assert-name:
+	@if [ -z "$(ORG_NAME)" ] || [ -z "$(APP_NAME)" ]; then \
+		echo "ORG_NAME or APP_NAME is empty"; \
+		exit 1; \
+	fi
 
 env ?= local
 
